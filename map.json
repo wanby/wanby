@@ -1,0 +1,218 @@
+{
+  "operationalLayers": [
+    {
+      "id": "1a1334fe05d-layer-2",
+      "title": "NYC Police Station Locations",
+      "url": "https://services6.arcgis.com/yG5s3afENB5iO9fj/arcgis/rest/services/Police_Station_Safety/FeatureServer/0",
+      "itemId": "aaff3e8b131a4851b588d3d96b4ae63c",
+      "layerType": "ArcGISFeatureLayer",
+      "blendMode": "normal",
+      "layerDefinition": {
+        "fieldConfigurations": [
+          {
+            "alias": "Address",
+            "name": "ADDRESS"
+          },
+          {
+            "alias": "Borough",
+            "name": "BORO"
+          },
+          {
+            "alias": "Borough Code",
+            "name": "BOROCODE",
+            "fieldFormat": {
+              "type": "number",
+              "useGrouping": "always"
+            }
+          },
+          {
+            "alias": "City",
+            "name": "CITY"
+          },
+          {
+            "alias": "Data Source",
+            "name": "DATASOUCE"
+          },
+          {
+            "alias": "Facility Domain",
+            "name": "FACDOMAIN"
+          },
+          {
+            "alias": "Facility Group",
+            "name": "FACGROUP"
+          },
+          {
+            "alias": "Facility Name",
+            "name": "FACNAME"
+          },
+          {
+            "alias": "Facility Sub-Group",
+            "name": "FACSUBGRP"
+          },
+          {
+            "alias": "Facility Type",
+            "name": "FACTYPE"
+          },
+          {
+            "alias": "Service Area",
+            "name": "SERVAREA"
+          },
+          {
+            "alias": "Street Name",
+            "name": "STREETNAME"
+          },
+          {
+            "alias": "ZIP Code",
+            "name": "ZIPCODE"
+          }
+        ],
+        "drawingInfo": {
+          "renderer": {
+            "type": "simple",
+            "symbol": {
+              "type": "esriSMS",
+              "color": [
+                214,
+                69,
+                69,
+                255
+              ],
+              "angle": 0,
+              "xoffset": 0,
+              "yoffset": 0,
+              "size": 9,
+              "style": "esriSMSCircle",
+              "outline": {
+                "type": "esriSLS",
+                "color": [
+                  255,
+                  255,
+                  255,
+                  255
+                ],
+                "width": 1.5,
+                "style": "esriSLSSolid"
+              }
+            }
+          }
+        }
+      },
+      "popupInfo": {
+        "popupElements": [
+          {
+            "type": "fields",
+            "fieldInfos": [
+              {
+                "fieldName": "FACNAME",
+                "isEditable": true,
+                "label": "FACNAME",
+                "visible": true
+              },
+              {
+                "fieldName": "ADDRESS",
+                "isEditable": true,
+                "label": "ADDRESS",
+                "visible": true
+              },
+              {
+                "fieldName": "CITY",
+                "isEditable": true,
+                "label": "CITY",
+                "visible": true
+              },
+              {
+                "fieldName": "BORO",
+                "isEditable": true,
+                "label": "BORO",
+                "visible": true
+              },
+              {
+                "fieldName": "FACTYPE",
+                "isEditable": true,
+                "label": "FACTYPE",
+                "visible": true
+              }
+            ]
+          }
+        ],
+        "fieldInfos": [
+          {
+            "fieldName": "FACNAME",
+            "isEditable": true,
+            "label": "FACNAME",
+            "visible": true
+          },
+          {
+            "fieldName": "ADDRESS",
+            "isEditable": true,
+            "label": "ADDRESS",
+            "visible": true
+          },
+          {
+            "fieldName": "CITY",
+            "isEditable": true,
+            "label": "CITY",
+            "visible": true
+          },
+          {
+            "fieldName": "BORO",
+            "isEditable": true,
+            "label": "BORO",
+            "visible": true
+          },
+          {
+            "fieldName": "FACTYPE",
+            "isEditable": true,
+            "label": "FACTYPE",
+            "visible": true
+          }
+        ],
+        "title": "{FACNAME}"
+      }
+    }
+  ],
+  "baseMap": {
+    "baseMapLayers": [
+      {
+        "id": "world-hillshade-layer",
+        "showLegend": false,
+        "opacity": 1,
+        "title": "World Hillshade",
+        "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+        "visibility": true,
+        "layerType": "ArcGISTiledMapServiceLayer"
+      },
+      {
+        "id": "topo-vector-base-layer",
+        "opacity": 1,
+        "title": "World Topo",
+        "visibility": true,
+        "layerType": "VectorTileLayer",
+        "styleUrl": "https://cdn.arcgis.com/sharing/rest/content/items/7dc6cea0b1764a1f9af2e679f642f0f5/resources/styles/root.json"
+      }
+    ],
+    "title": "Topographic"
+  },
+  "authoringApp": "ArcGIS API for JavaScript",
+  "authoringAppVersion": "5.1",
+  "initialState": {
+    "viewpoint": {
+      "targetGeometry": {
+        "spatialReference": {
+          "latestWkid": 3857,
+          "wkid": 102100
+        },
+        "xmin": -8242264.199628436,
+        "ymin": 4977421.965774833,
+        "xmax": -8239364.369867791,
+        "ymax": 4981004.951475794
+      }
+    }
+  },
+  "spatialReference": {
+    "latestWkid": 3857,
+    "wkid": 102100
+  },
+  "timeZone": "system",
+  "version": "2.37"
+}

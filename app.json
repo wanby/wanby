@@ -1,0 +1,121 @@
+{
+  "version": "0.3",
+  "kind": "app",
+  "generatedAt": "2026-10-10T06:58:21.195Z",
+  "item": {
+    "title": "NYC Police Response Coverage Analysis",
+    "subtitle": "Select an NYPD facility to model a 10-minute drive-time service area"
+  },
+  "map": {
+    "type": "webmap",
+    "path": "./map.json"
+  },
+  "app": {
+    "template": "nova-app",
+    "preset": "analysis",
+    "showHeader": true,
+    "theme": {
+      "mode": "light",
+      "accent": "coral"
+    },
+    "layout": {
+      "right": {
+        "hidden": false,
+        "width": "360px",
+        "title": "Coverage workflow",
+        "collapsed": false,
+        "blocks": [
+          {
+            "type": "text",
+            "id": "coverage-instructions",
+            "content": "## Police response coverage\nChoose a station by clicking a location on the map, or search by precinct, address, or borough below. The app will calculate a **10-minute driving-time** service area for one facility.",
+            "format": "plain"
+          },
+          {
+            "type": "customMount",
+            "id": "station-workflow",
+            "title": "Find or select a station"
+          }
+        ]
+      }
+    },
+    "widgets": [
+      {
+        "id": "legend",
+        "type": "legend",
+        "slot": "bottom-left",
+        "config": {}
+      },
+      {
+        "id": "home",
+        "type": "home",
+        "slot": "top-left",
+        "config": {}
+      },
+      {
+        "id": "default-layer-list",
+        "type": "layerList",
+        "slot": "top-right",
+        "config": {}
+      },
+      {
+        "id": "default-basemap-gallery",
+        "type": "basemapGallery",
+        "slot": "top-right",
+        "config": {}
+      }
+    ],
+    "interactions": [],
+    "behaviors": [
+      {
+        "id": "police-response-coverage",
+        "label": "Police station search and 10-minute service areas",
+        "bundlePath": "./runtime/behaviors/police-response-coverage-0479112a11bec777.js",
+        "sourceSha256": "0479112a11bec777469b8ae6a750ebe66fa60dbccbe12efe4468ccc33667f864",
+        "modulePaths": [
+          "esri/Graphic",
+          "esri/portal/Portal",
+          "esri/rest/networkService",
+          "esri/rest/serviceArea",
+          "esri/rest/support/FeatureSet",
+          "esri/rest/support/ServiceAreaParameters"
+        ],
+        "config": {
+          "layerId": "1a1334fe05d-layer-2"
+        },
+        "mounts": [
+          "station-workflow"
+        ],
+        "ownedLayerIds": [],
+        "interactions": [
+          {
+            "id": "station-map-pick",
+            "trigger": {
+              "type": "feature-click",
+              "layerId": "1a1334fe05d-layer-2"
+            },
+            "actionId": "generate-coverage"
+          }
+        ],
+        "installedAt": "2026-10-13T03:37:09.370Z"
+      }
+    ]
+  },
+  "nova": {
+    "basename": "48bd61c1-5938-4eca-bf69-0d0bf61cfb1f",
+    "presentationMode": "app",
+    "ownedGraphicsLayerIds": [],
+    "origin": {
+      "portalUrl": "https://www.arcgis.com",
+      "mapId": "output-910a43a7-64d2-4890-a5cf-71d9ca2caa12",
+      "mapName": "New Conversation",
+      "viewMode": "2d",
+      "capturedAt": "2026-10-10T06:58:21.190Z"
+    },
+    "sourceSelection": {
+      "mode": "all"
+    },
+    "unsupportedLayers": [],
+    "degradedFeatures": []
+  }
+}
